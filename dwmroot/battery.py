@@ -25,4 +25,5 @@ def get_remaining_capacity():
 def get_battery_percentage():
     total = get_total_capacity()
     remaining = get_remaining_capacity()
-    return '{0:.2f}'.format(remaining / total)
+    percentage = (remaining / total) * 100
+    return '{0:.2f}'.format(percentage)
