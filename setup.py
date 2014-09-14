@@ -86,6 +86,6 @@ if __name__ == "__main__":
           packages=find_packages(),
           entry_points="""
               [console_scripts]
-              dwmroot=dwmroot.main.main
+              dwmroot=dwmroot.main:main
           """,
           license="BSD")
