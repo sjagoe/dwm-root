@@ -10,7 +10,7 @@ from .battery import get_battery_percentage
 def main():
     while True:
         battery = get_battery_percentage()
-        now = datetime.now().strftime('%Y/%m/%d %H:%M:%S')
+        now = datetime.now().strftime('%Y/%m/%d %H:%M')
         dwm_root = '{0} | {1}'.format(battery, now)
         subprocess.call(['xsetroot', '-name', dwm_root])
-        time.sleep(1)
+        time.sleep(15)
