@@ -1,3 +1,4 @@
 *.pyc
 *.~
 /dwmroot.egg-info
+/dwmroot/_version.py
