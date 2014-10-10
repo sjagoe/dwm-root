@@ -84,6 +84,7 @@ if __name__ == "__main__":
           version=__version__,
           author="Simon Jagoe",
           packages=find_packages(),
+          install_requires=['psutil'],
           entry_points="""
               [console_scripts]
               dwmroot=dwmroot.main:main
