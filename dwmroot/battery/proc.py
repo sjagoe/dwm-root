@@ -1,5 +1,6 @@
 from __future__ import print_function, unicode_literals, absolute_import
 
+import os
 import re
 
 if not os.path.isdir('/proc/acpi/battery/BAT0'):
