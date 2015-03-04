@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 MAJOR = 0
 MINOR = 1
-MICRO = 0
+MICRO = 1
 
 IS_RELEASED = False
 
@@ -84,7 +84,6 @@ if __name__ == "__main__":
           version=__version__,
           author="Simon Jagoe",
           packages=find_packages(),
-          install_requires=['psutil'],
           entry_points="""
               [console_scripts]
               dwmroot=dwmroot.main:main
