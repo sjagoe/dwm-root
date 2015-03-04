@@ -1,6 +1,10 @@
-from __future__ import print_function, unicode_literals
+from __future__ import print_function, unicode_literals, absolute_import
 
 import re
+
+if not os.path.isdir('/proc/acpi/battery/BAT0'):
+    raise ImportError('/proc/acpi/battery/BAT0 not found')
+
 
 CAPACITY = re.compile(r'^last full capacity: +(\d+)')
 REMAINING = re.compile(r'^remaining capacity: +(\d+)')
@@ -31,11 +35,3 @@ def get_charging_state():
         return '-'
     else:
         return ' '
-
-
-def get_battery_percentage():
-    total = get_total_capacity()
-    remaining = get_remaining_capacity()
-    state = get_charging_state()
-    percentage = (remaining / total) * 100
-    return '{0:.2f}{1}'.format(percentage, state)
